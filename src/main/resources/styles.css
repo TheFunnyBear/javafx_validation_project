@@ -1,0 +1,8 @@
+.label-error {
+    color: red;
+    font-weight: bold;
+}
+
+.list-view .list-cell:focused {
+    background-color: lightblue;
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.kosolapova.javafx.validation.controllers.MainController">
+
+    <center>
+        <TabPane>
+            <tabs>
+                <Tab text="Валидация в модальном окне">
+                    <content>
+                        <fx:include source="/fxml/validation_modal.fxml"/>
+                    </content>
+                </Tab>
+                <Tab text="Валидация в виде подсказок рядом с полями">
+                    <content>
+                        <fx:include source="/fxml/validation_inline.fxml"/>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>

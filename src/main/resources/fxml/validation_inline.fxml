@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.kosolapova.javafx.validation.controllers.ValidationInlineController">
+    <children>
+        <!-- Заголовок -->
+        <Label text="Форма ввода с мгновенной валидацией"/>
+
+        <!-- Поля ввода с индикаторами ошибок -->
+        <HBox spacing="10">
+            <Label text="Имя:"/>
+            <TextField fx:id="txtName"/>
+            <Label fx:id="lblNameError" styleClass="label-error"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Пароль:"/>
+            <PasswordField fx:id="pwdPassword"/>
+            <Label fx:id="lblPwdError" styleClass="label-error"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Выбор пунктов:"/>
+            <ListView fx:id="lstSelections" prefHeight="100.0" prefWidth="150.0"/>
+            <Label fx:id="lblLstError" styleClass="label-error"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Подтверждение:"/>
+            <CheckBox fx:id="chkAgreement" text="Я согласен"/>
+            <Label fx:id="lblChkError" styleClass="label-error"/>
+        </HBox>
+    </children>
+</VBox>

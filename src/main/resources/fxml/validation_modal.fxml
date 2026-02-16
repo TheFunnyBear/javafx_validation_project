@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.kosolapova.javafx.validation.controllers.ValidationModalController">
+    <children>
+        <!-- Заголовок -->
+        <Label text="Форма ввода с модальным окном"/>
+
+        <!-- Поля ввода -->
+        <HBox spacing="10">
+            <Label text="Имя:"/>
+            <TextField fx:id="txtName"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Пароль:"/>
+            <PasswordField fx:id="pwdPassword"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Выбор пунктов:"/>
+            <ListView fx:id="lstSelections" prefHeight="100.0" prefWidth="150.0"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Подтверждение:"/>
+            <CheckBox fx:id="chkAgreement" text="Я согласен"/>
+        </HBox>
+
+        <!-- Кнопка отправки -->
+        <Button fx:id="btnSubmit" onAction="#handleSubmit" text="Отправить"/>
+    </children>
+</VBox>
