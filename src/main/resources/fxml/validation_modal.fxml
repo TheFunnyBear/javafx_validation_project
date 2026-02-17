@@ -1,34 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<?import com.jfoenix.controls.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
 
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.kosolapova.javafx.validation.controllers.ValidationModalController">
-    <children>
-        <!-- Заголовок -->
-        <Label text="Форма ввода с модальным окном"/>
+      fx:controller="com.kosolapova.javafx.validation.controllers.ValidationModalController"
+      spacing="15"
+      style="-fx-background-color: #f5f5f5;">
 
-        <!-- Поля ввода -->
-        <HBox spacing="10">
-            <Label text="Имя:"/>
-            <TextField fx:id="txtName"/>
-        </HBox>
-        <HBox spacing="10">
-            <Label text="Пароль:"/>
-            <PasswordField fx:id="pwdPassword"/>
-        </HBox>
-        <HBox spacing="10">
-            <Label text="Выбор пунктов:"/>
-            <ListView fx:id="lstSelections" prefHeight="100.0" prefWidth="150.0"/>
-        </HBox>
-        <HBox spacing="10">
-            <Label text="Подтверждение:"/>
-            <CheckBox fx:id="chkAgreement" text="Я согласен"/>
-        </HBox>
+    <!-- Отступы вокруг содержимого -->
+    <padding>
+        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
+    </padding>
 
-        <!-- Кнопка отправки -->
-        <Button fx:id="btnSubmit" onAction="#handleSubmit" text="Отправить"/>
-    </children>
+    <!-- Заголовок -->
+    <Label text="Форма ввода с модальным окном"
+           style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-padding: 0 0 15 0;"
+    />
+
+    <!-- Поле "Имя" -->
+    <HBox spacing="15.0" alignment="CENTER_LEFT">
+        <Label text="Имя:" style="-fx-font-weight: 500; -fx-padding: 0 5 0 0;"/>
+        <JFXTextField fx:id="txtName"
+                      promptText="Введите имя"
+                      prefWidth="250.0"
+                      styleClass="text-field"/>
+    </HBox>
+
+    <!-- Поле "Пароль" -->
+    <HBox spacing="15.0" alignment="CENTER_LEFT">
+        <Label text="Пароль:" style="-fx-font-weight: 500; -fx-padding: 0 5 0 0;"/>
+        <JFXPasswordField fx:id="pwdPassword"
+                          promptText="Введите пароль"
+                          prefWidth="250.0"
+                          styleClass="password-field"/>
+    </HBox>
+
+    <!-- Список выбора -->
+    <HBox spacing="15.0" alignment="TOP_LEFT">
+        <Label text="Выбор пунктов:" style="-fx-font-weight: 500; -fx-padding: 5 5 0 0;"/>
+        <VBox>
+            <JFXListView fx:id="lstSelections"
+                         prefHeight="120.0"
+                         prefWidth="200.0"
+                         styleClass="list-view"/>
+        </VBox>
+    </HBox>
+
+    <!-- Чекбокс "Согласие" -->
+    <HBox spacing="10.0" alignment="CENTER_LEFT">
+        <JFXCheckBox fx:id="chkAgreement"
+                     text="Я согласен"
+                     styleClass="check-box"/>
+    </HBox>
+
+    <!-- Кнопка отправки -->
+    <JFXButton fx:id="btnSubmit"
+               text="Отправить"
+               onAction="#handleSubmit"
+               styleClass="button-raised"
+               style="-fx-background-color: #1a73e8; -fx-text-fill: white;"
+               prefWidth="120.0"
+               alignment="CENTER"
+    />
+
 </VBox>

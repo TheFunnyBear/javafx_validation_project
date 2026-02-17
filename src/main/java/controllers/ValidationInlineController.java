@@ -19,8 +19,15 @@ public class ValidationInlineController {
 
     @FXML
     public void initialize() {
+
+        // Заполняем список тестовыми пунктами
+        for (int i = 1; i <= 15; i++) {
+            lstSelections.getItems().add("Тестовый пункт " + i);
+        }
+
         addListeners(); // Регистрация слушателей изменений
     }
+
 
     private void addListeners() {
         txtName.textProperty().addListener((observable, oldValue, newValue) -> checkName(newValue));

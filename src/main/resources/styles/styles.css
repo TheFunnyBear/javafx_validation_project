@@ -1,0 +1,59 @@
+
+.list-view .list-cell:focused {
+    background-color: lightblue;
+}
+
+
+/* Стили для JFoenix-компонентов */
+.text-field {
+    -fx-prompt-text-fill: derive(-fx-control-inner-background, -30%);
+}
+.text-field:focused {
+    -jfx-underline-color: #009688;
+}
+
+.password-field {
+    -fx-prompt-text-fill: derive(-fx-control-inner-background, -30%);
+}
+.password-field:focused {
+    -jfx-underline-color: #009688;
+}
+
+.list-view {
+    -fx-border-color: derive(#bdbdbd, 30%);
+    -fx-border-radius: 4;
+}
+.list-view:focused {
+    -fx-border-color: #009688;
+    -fx-border-width: 1.5;
+}
+
+.check-box {
+    -fx-box-border: derive(#bdbdbd, 30%);
+}
+.check-box:selected {
+    -fx-mark-color: #009688;
+}
+
+/* Ошибки */
+.label-error {
+    -fx-text-fill: #e53935;
+    -fx-font-style: italic;
+}
+
+/* Заголовок */
+.heading {
+    -fx-text-fill: #333333;
+}
+
+
+.tab-pane {
+    -fx-background-color: white;
+}
+.tab {
+    -fx-background-color: white;
+}
+.tab:selected {
+    -fx-background-color: orange;
+    -fx-text-fill: white;
+}

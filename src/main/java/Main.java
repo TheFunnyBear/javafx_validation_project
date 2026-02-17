@@ -14,8 +14,8 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/main_view.fxml"));
         Scene scene = new Scene(root);
-        scene.getStylesheets().add(getClass().getResource("/styles.css").toExternalForm());
-        primaryStage.setTitle("JavaFX Data Validation Example");
+        scene.getStylesheets().add(getClass().getResource("/styles/styles.css").toExternalForm());
+        primaryStage.setTitle("Пример валидации данных");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
