@@ -4,9 +4,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import java.util.List;
 
 public class ErrorDialogController {
-
     @FXML
     private Label lblTitle;
     @FXML
@@ -16,28 +16,27 @@ public class ErrorDialogController {
 
     private Stage dialogStage;
 
-    // Инициализация после загрузки FXML
     @FXML
-    private void initialize() {
-        // Можно добавить дополнительные настройки при необходимости
-    }
+    private void initialize() {}
 
-    // Сеттеры для данных
     public void setTitle(String title) {
         lblTitle.setText(title);
     }
 
-    public void setMessage(String message) {
-        lblMessage.setText(message);
+    // Новый метод: принимает список строк
+    public void setMessages(List<String> messages) {
+        // Объединяем строки через перенос
+        String combined = String.join("\n", messages);
+        lblMessage.setText(combined);
+        // Задаём красный цвет для всего текста
+        lblMessage.setStyle("-fx-font-size: 14px; -fx-text-fill: #e53935; -fx-line-spacing: 5;");
     }
 
-    // Обработчик кнопки OK
     @FXML
     private void onOKClicked() {
         dialogStage.close();
     }
 
-    // Установка Stage (для управления окном)
     public void setDialogStage(Stage stage) {
         this.dialogStage = stage;
     }

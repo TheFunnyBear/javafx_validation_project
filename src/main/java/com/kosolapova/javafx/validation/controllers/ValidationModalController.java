@@ -46,7 +46,7 @@ public class ValidationModalController {
             DialogWindow dialog = new DialogWindow(
                     ownerStage,
                     "Ошибка валидации",
-                    errors.toString(),
+                    errors,
                     true
             );
             dialog.showAndWait();

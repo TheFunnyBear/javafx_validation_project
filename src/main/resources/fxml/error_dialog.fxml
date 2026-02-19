@@ -22,10 +22,19 @@
            styleClass="headline"
            style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #e53935;"/>
 
+    <!-- Заголовок писок ошибок -->
+    <Label fx:id="lblTitleSecond"
+           text="Список ошибок:"
+           styleClass="headline"
+           style="-fx-font-size: 12px; -fx-font-weight: bold;"/>
+
     <!-- Сообщение об ошибке (многострочное) -->
     <Label fx:id="lblMessage"
-              wrapText="true"
-              style="-fx-font-size: 14px; -fx-text-fill: #424242; -fx-line-spacing: 5;"/>
+           wrapText="true"
+           style="-fx-font-size: 14px; -fx-line-spacing: 5;"
+           maxWidth="300"
+           prefHeight="100"/>
+
 
     <!-- Инструкция -->
     <Label text="Нажмите OK, чтобы закрыть."
