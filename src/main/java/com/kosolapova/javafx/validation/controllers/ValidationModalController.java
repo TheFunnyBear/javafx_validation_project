@@ -39,16 +39,23 @@ public class ValidationModalController {
 
         List<String> errors = data.validate();
         if(errors.isEmpty()) {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION, "Данные введены корректно!");
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Успех");
+            alert.setHeaderText("Проверка пройдена");
+            alert.setContentText("Данные введены корректно!");
+
+            Stage ownerStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            alert.initOwner(ownerStage);
+
             alert.showAndWait();
         } else {
             Stage ownerStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             DialogWindow dialog = new DialogWindow(
                     ownerStage,
                     "Ошибка валидации",
-                    errors,
-                    true
+                    errors
             );
+
             dialog.showAndWait();
         }
     }

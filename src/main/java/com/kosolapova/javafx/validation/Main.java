@@ -17,6 +17,9 @@ public class Main extends Application {
         scene.getStylesheets().add(getClass().getResource("/styles/styles.css").toExternalForm());
         primaryStage.setTitle("Пример валидации данных");
         primaryStage.setScene(scene);
+
+        primaryStage.setMaximized(true);
+
         primaryStage.show();
     }
 
